@@ -1,11 +1,14 @@
 <template>
   <nav class="header">
     <h2 class="logo">Book.fy</h2>
-    <ul class="menu">
-      <router-link class="menu-link" to="/">Biblioteca</router-link>
-      <router-link class="menu-link" to="/MyLibaries">Meus Livros</router-link>
-      <router-link class="menu-link" to="/ContactMe">Contate-me</router-link>
-    </ul>
+    <div id="div-menu">
+      <ul class="menu">
+        <router-link class="menu-link" to="/">Biblioteca</router-link>
+        <router-link class="menu-link" to="/MyLibaries">Meus Livros</router-link>
+        <router-link class="menu-link" to="/ContactMe">Contate-me</router-link>
+      </ul>
+    </div>
+    <div id="user" >Diego Leandro<i class="pi pi-user icon-user" style="font-size: 1.5rem" /></div>
   </nav>
 </template>
 <script setup lang="ts">
@@ -14,7 +17,7 @@ import { RouterLink } from 'vue-router';
 
 <style scoped>
   .header {
-    height: 50px;
+    height: 60px;
     width: 100%;
     background-color: var(--color-contrast);
     display: flex;
@@ -27,17 +30,26 @@ import { RouterLink } from 'vue-router';
     font-size: 24px;
     font-family: bold;
     color: white;
+    width: 100%;
   }
 
   .menu {
     display: flex;
     justify-content: space-around;
-    gap: 20px;
+    gap: 10px;
     background-color: var(--color-background);
     border-radius: 10px;
     padding: 4px 10px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 12px;
+    width: 350px;
+    box-shadow: 0 0 1px 1px var(--color-contrast-mute);
+  }
+
+  #div-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
   a {
@@ -65,5 +77,24 @@ import { RouterLink } from 'vue-router';
     border-top: 2px solid var(--color-contrast-soft);
     box-shadow: 0 0 1px 1px gray;
     color: black; /* Cor do texto para a rota ativa */
+  }
+
+  .icon-user {
+    border-radius: 100%;
+    border: 1px solid #000000;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-background);
+  }
+
+  #user {
+    gap: 4px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    width: 100%;
   }
 </style>

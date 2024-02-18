@@ -1,7 +1,7 @@
 <template>
   <div class="containerBooks">
       <div v-for="book in books" :key="book.id" class="FeatureBook">
-        <div class="img"></div>
+        <div class="img"><i class="pi pi-book" style="font-size: 4rem; color: var(--color-border-hover);"></i></div>
         <div class="info-book">
           <Label>Name:</Label> {{ book.name }} -- <label>Vol:</label>{{ book.vol }} -- <label>   Ano:</label> {{ book.vol }}
           <label>Pages:</label> [{{ book.pages_id.length }}]
@@ -84,9 +84,9 @@ export default {
   }
   .FeatureBook {
     width: 300px;
-    height: 300px;
-    background-color: var(--color-contrast);
-    box-shadow: 0 2px 2px 1px black;
+    height: 350px;
+    background-color: var(--color-contrast-mute);
+    box-shadow: 0 2px 2px 1px var(--color-border-mute);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -100,13 +100,16 @@ export default {
     background-color: white;
     width: 70%;
     height: 70%;
-    border: 1px solid black;
+    border: 1px solid var(--color-border-mute);
     border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .info-book {
     padding: 0 5px;
     border-radius: 3px;
-    border: 1px solid black;
+    box-shadow: 0 0 1px 1px var(--color-border-mute);
     height: 50px;
     width: 95%;
     color: white;
@@ -115,8 +118,7 @@ export default {
   label {
     color: black;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    background-color: white;
-    border-radius: 10px;
+    background-color: var(--color-contrast-soft);
     padding: 0 10px;
   }
 </style>
