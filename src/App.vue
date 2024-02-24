@@ -9,4 +9,21 @@ import NavBar from './components/NavBar.vue';
 </template>
 
 <style>
+  .DESENVOLVIMENTO {
+    background-color: var(--color-development);
+    box-shadow: 0  2px 1px 0 var(--color-contrast);
+  }
+  .COMPLETO {
+    background-color: var(--color-completed);
+    box-shadow: 0  2px 1px 0 var(--color-contrast);
+  }
+  .img {
+    border: 1px solid var(--color-border-mute);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    background-color: white;
+  }
 </style>

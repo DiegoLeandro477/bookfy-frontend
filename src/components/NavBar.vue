@@ -1,15 +1,14 @@
-<template>
-  <nav class="header">
-    <h2 class="logo">Book.fy</h2>
-    <div id="div-menu">
-      <ul class="menu">
-        <router-link class="menu-link" to="/">Biblioteca</router-link>
-        <router-link class="menu-link" to="/MyLibaries">Meus Livros</router-link>
-        <router-link class="menu-link" to="/ContactMe">Contate-me</router-link>
-      </ul>
-    </div>
-    <div id="user" >Diego Leandro<i class="pi pi-user icon-user" style="font-size: 1.5rem" /></div>
-  </nav>
+<template lang="pug">
+nav.header
+  h2.logo BOOK.FY
+  #div-menu
+    ul.menu
+      router-link.menu-link(to="/") BIBLIOTECA
+      router-link.menu-link(to="/MyLibaries") MEUS LIVROS
+      router-link.menu-link(to="/ContactMe") CONTACTE-ME
+  #user
+    label Diego Leandro
+    i.pi.pi-user.icon-user(style="font-size: 1.5rem")
 </template>
 <script setup lang="ts">
 import { RouterLink } from 'vue-router';
@@ -19,7 +18,7 @@ import { RouterLink } from 'vue-router';
   .header {
     height: 60px;
     width: 100%;
-    background-color: var(--color-contrast);
+    background-color: var(--color-background);
     display: flex;
     align-items: center;
     padding: 20px 50px;
@@ -28,8 +27,7 @@ import { RouterLink } from 'vue-router';
 
   .logo {
     font-size: 24px;
-    font-family: bold;
-    color: white;
+    color: var(--color-text-light);
     width: 100%;
   }
 
@@ -37,13 +35,13 @@ import { RouterLink } from 'vue-router';
     display: flex;
     justify-content: space-around;
     gap: 10px;
-    background-color: var(--color-background);
+    background-color: var(--color-background-soft);
     border-radius: 10px;
     padding: 4px 10px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 12px;
-    width: 350px;
-    box-shadow: 0 0 1px 1px var(--color-contrast-mute);
+    width: 400px;
+    box-shadow: 0 0 1px 1px var(--color-contrast);
   }
 
   #div-menu {
@@ -55,39 +53,39 @@ import { RouterLink } from 'vue-router';
   a {
     display: flex;
     align-items: center;
+    transition: .4s;
   }
 
   a:hover {
-    background-color: var(--color-contrast-mute);
-    color: white;
+    background-color: var(--color-background-mute);
+    color: var(--color-text-night);
     border-radius: 5px;
     cursor: pointer;
     transition: .4s;
   }
 
   .menu-link {
-    color: #000000; /* Cor padrão dos links */
+    color: var(--color-text-light); /* Cor padrão dos links */
     text-decoration: none; /* Remover sublinhado padrão */
     padding: 6px 12px;
     border-radius: 5px;
   }
 
   .menu-link.router-link-active {
-    border-bottom:4px solid var(--color-border); /* Cor de fundo para a rota ativa */
-    border-top: 2px solid var(--color-contrast-soft);
+    background-color: var(--color-background);
     box-shadow: 0 0 1px 1px gray;
-    color: black; /* Cor do texto para a rota ativa */
+    color: var(--color-text-light); /* Cor do texto para a rota ativa */
   }
 
   .icon-user {
     border-radius: 100%;
-    border: 1px solid #000000;
+    border: 1px solid var(--color-border);
     width: 40px;
     height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--color-background);
+    background-color: var(--color-background-soft);
   }
 
   #user {

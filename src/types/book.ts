@@ -4,7 +4,9 @@ export interface Book {
   vol: number;
   user_id: number;
   pages_id: number[];
-  date_create: Date;
-  date_update: Date;
-  date_publicated: Date;
+  status: string;
+  sinopse: string;
+  date_create: string;
+  date_update: string;
+  date_publicated: string;
 }

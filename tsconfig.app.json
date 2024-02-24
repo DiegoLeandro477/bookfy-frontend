@@ -18,6 +18,6 @@
     }
   },
   "files": [
-    "src/types/book.ts"
+    "src/types/book.ts", "./src/views/books.ts"
   ],
 }

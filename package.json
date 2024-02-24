@@ -13,6 +13,8 @@
   },
   "dependencies": {
     "primeicons": "^6.0.1",
+    "pug": "^3.0.2",
+    "pug-plain-loader": "^1.1.0",
     "vue": "^3.4.15",
     "vue-router": "^4.2.5"
   },
