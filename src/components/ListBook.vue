@@ -14,13 +14,12 @@
         p {{ book.sinopse }}
 </template>
 
-<script lang="ts">
+<script lang="ts" setup>
+import type { Book } from '@/types/book';
+import { defineProps } from 'vue';
 
-export default {
-  props: {
-    books: [],
-  }
-}
+const props = defineProps(['books']);
+const books: Book[] = props.books;
 </script> 
 
 <style scoped>
