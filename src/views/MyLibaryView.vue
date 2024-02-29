@@ -11,13 +11,18 @@
       h2 Criar um livro
 </template>
 
-<script lang="ts" setup>
-  import FeatureBook from '@/components/FeatureBook.vue';
-  import ListBook from '@/components/ListBook.vue';
+<script lang="ts">
+import type { Book } from '@/types/book';
 
-  import type { Book } from '@/types/book';
 
-  const books: Book[] = [
+export default {
+  data() {
+    return {
+      books: [] as Book[],
+    }
+  },
+  created() {
+    this.books = [
     {
       id: 1,
       name: 'Book 1',
@@ -92,7 +97,9 @@
       +'jogadores, esse texto é só um teste para saber se a sinopse está configurada e'
       +'desenhada corretamente, repetindo texto:'
     }
-  ]
+    ]
+  }
+}
 </script>
 
 <style scoped>

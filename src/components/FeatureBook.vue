@@ -11,14 +11,18 @@
           label.vol {{ book.vol }}
 </template>
 
-<script lang="ts" setup>
+<script lang="ts">
 import type { Book } from '@/types/book';
-import { defineProps } from 'vue';
-
-const props = defineProps(['books']);
-const books: Book[] = props.books;
-
-</script>
+import { defineComponent } from 'vue';
+export default defineComponent({
+  props: {
+    books: {
+      type: Array as () => Book[],
+      required: true,
+    },
+  }
+})
+</script> 
 
 <style scoped>
   .containerBooks {
