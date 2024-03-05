@@ -38,7 +38,7 @@ import { RouterLink } from 'vue-router';
     background-color: var(--color-background-soft);
     border-radius: 10px;
     padding: 4px 10px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: var(--font-text);
     font-size: 12px;
     width: 400px;
     box-shadow: 0 0 1px 1px var(--color-contrast);

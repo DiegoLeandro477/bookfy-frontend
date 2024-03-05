@@ -13,6 +13,8 @@
 
   --color-development: rgba(238, 238, 13, 0.438);
   --color-completed: rgba(153, 205, 50, 0.397);
+
+  --font-text: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 *,

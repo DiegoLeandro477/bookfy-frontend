@@ -11,7 +11,7 @@ main
   ListBook(:books="books")
 </template>
 
-<script lang="ts" setup>
+<script setup lang="ts">
   import FeatureBook from '@/components/FeatureBook.vue';
   import ListBook from '@/components/ListBook.vue';
 
@@ -58,7 +58,7 @@ main
       vol: 1,
       user_id: 1,
       pages_id: [],
-      status: 'DESENVOLVIMENTO',
+      status: 'COMPLETO',
       date_create: '2024-02-15',
       date_update: '2024-02-15',
       date_publicated: '2024-02-15',
@@ -134,7 +134,7 @@ main
     align-items: center;
     gap: 2px;
     background-color: var(--color-background-soft);
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: var(--font-text);
     width: 60px;
     height: 28px;
     border: 1px solid var(--color-border);

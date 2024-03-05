@@ -65,7 +65,7 @@ export default {
   }
 
   label {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: var(--font-text);
     border-radius: 30px;
     padding: 0 5px;
     display: flex;
@@ -74,7 +74,7 @@ export default {
   }
   .title-book {
     box-shadow: 0  2px 1px 0 var(--color-contrast);
-    font-family: roboto;
+    font-family: var(--font-text);
     font-size: 17px;
     color: var(--color-text-light);
     width: 50%;

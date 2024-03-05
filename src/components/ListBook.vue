@@ -14,13 +14,16 @@
         p {{ book.sinopse }}
 </template>
 
-<script lang="ts">
+<script setup lang="ts">
+  import { defineProps } from 'vue';
+  import type Book from "@/types/book";
 
-export default {
-  props: {
-    books: [],
-  }
-}
+  const props = defineProps({
+    books:{
+      type: Array as () => Book[],
+      required: true
+    }
+  });
 </script> 
 
 <style scoped>
@@ -68,7 +71,7 @@ export default {
   }
   .info-book .title {
     color: var(--color-text-light);
-    font-family: bold, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: var(--font-text);
   }
   .info-book .info-details {
     color: var(--color-text-light);
@@ -80,7 +83,7 @@ export default {
     width: auto;
     box-shadow: 0 1px 0 1px var(--color-contrast);
     border-radius: 20px;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: var(--font-text);
   }
   .details {
     height: 100%;
