@@ -6,6 +6,7 @@ nav.header
       router-link.menu-link(to="/") BIBLIOTECA
       router-link.menu-link(to="/MyLibaries") MEUS LIVROS
       router-link.menu-link(to="/ContactMe") CONTACTE-ME
+      router-link.menu-link(to="/login") LOGIN
   #user
     label Diego Leandro
     i.pi.pi-user.icon-user(style="font-size: 1.5rem")

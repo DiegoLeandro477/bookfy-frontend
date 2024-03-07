@@ -1,19 +1,28 @@
 <template lang="pug">
 div
+  h2 Login
+  form(@submit.prevent="login")
+    input(type="text" v-model="email" placeholder="Email")
+    input(type="password" v-model="password" placeholder="Senha")
+    input(type="submit" value="enviar")
+  </template>
   
-</template>
-
-<script setup lang="ts">
-import axiosInstance from '@/services/http.js';
-
-
-
-
-const postU = () => {
-  axiosInstance.post("/users/register", {name:"diego", email:"diego@gmail.com", password:"123"})
-}
-</script>
-
-<style scoped>
+  <script setup lang="ts">
+  import { ref } from 'vue';
+  import type { Login } from '@/types/Login';
   
-</style>
+  const email = ref('');
+  const password = ref('');
+  
+  const login = () => {
+    const loginInfo: Login = {
+      email: email.value,
+      password: password.value
+    };
+    console.log("login", loginInfo);
+  };
+  </script>
+  
+  <style scoped>
+  </style>
+  
