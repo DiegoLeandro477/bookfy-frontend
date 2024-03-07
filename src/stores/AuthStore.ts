@@ -20,7 +20,7 @@ export const useAuth = defineStore('auth', () => {
   const checkToken = async () => {
     try {
       const token_ = 'Bearer ' + token.value;
-      const { data } = await axiosInstance.get('/user/verify', {
+      const { data } = await axiosInstance.get('/users/verify', {
         headers: {
           Authorization: token_,
         }
