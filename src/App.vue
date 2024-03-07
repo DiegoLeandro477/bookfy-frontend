@@ -1,12 +1,12 @@
-<script setup lang="ts">
-import { RouterView } from 'vue-router'
-import NavBar from './components/NavBar.vue';
-</script>
-
 <template>
   <NavBar />
   <RouterView />
 </template>
+
+<script setup lang="ts">
+import { RouterView } from 'vue-router'
+import NavBar from './components/NavBar.vue';
+</script>
 
 <style>
   .DESENVOLVIMENTO {
@@ -25,5 +25,8 @@ import NavBar from './components/NavBar.vue';
     align-items: center;
     margin: 5px;
     background-color: white;
+    width: min-content;
+    height: min-content;
+    padding: 5px;
   }
 </style>

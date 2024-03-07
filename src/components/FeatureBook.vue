@@ -12,14 +12,17 @@
 </template>
 
 <script lang="ts">
-
-export default {
+import type { Book } from '@/types/book';
+import { defineComponent } from 'vue';
+export default defineComponent({
   props: {
-    books: [],
+    books: {
+      type: Array as () => Book[],
+      required: true,
+    },
   }
-}
-
-</script>
+})
+</script> 
 
 <style scoped>
   .containerBooks {

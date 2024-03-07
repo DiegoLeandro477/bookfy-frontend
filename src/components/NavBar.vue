@@ -11,8 +11,14 @@ nav.header
     label Diego Leandro
     i.pi.pi-user.icon-user(style="font-size: 1.5rem")
 </template>
-<script setup lang="ts">
+<script lang="ts">
 import { RouterLink } from 'vue-router';
+
+export default {
+  components: {
+    RouterLink,
+  }
+}
 </script>
 
 <style scoped>

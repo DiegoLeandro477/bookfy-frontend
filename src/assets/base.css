@@ -9,7 +9,7 @@
   --color-contrast: rgb(126, 112, 112);
 
   --color-text-light: black;
-  --color-text-night: white;
+  --color-text-night: rgb(240, 240, 240);
 
   --color-development: rgba(238, 238, 13, 0.438);
   --color-completed: rgba(153, 205, 50, 0.397);
