@@ -5,7 +5,8 @@
     "src/**/*", 
     "src/**/*.vue",
     "src/**/*.ts",
-    "src/types/*"
+    "src/types/*",
+    "src/stores/*"
   ],
   "exclude": ["src/**/__tests__/*"],
   "compilerOptions": {
@@ -18,6 +19,6 @@
     }
   },
   "files": [
-    "src/types/book.ts", "./src/views/books.ts"
+    "src/types/InterfacesData.ts", "src/assets/books.ts"
   ],
 }

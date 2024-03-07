@@ -86,4 +86,4 @@ export default defineComponent({
   label .vol {
     background-color: var(--color-background-mute);
   }
-</style>
+</style>@/types/InterfacesData

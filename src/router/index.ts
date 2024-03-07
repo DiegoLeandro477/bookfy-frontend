@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import LibariesView from '@/views/LibariesView.vue'
 import MyLibaryView from '@/views/MyLibaryView.vue'
 import ContateMeView from '@/views/ContateMeView.vue'
-import LoginView from '@/views/LoginView.vue'
+import AuthView from '@/views/AuthView.vue'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -24,7 +24,7 @@ const router = createRouter({
     {
       path: '/Login',
       name: 'Login',
-      component: LoginView
+      component: AuthView
     }
   ]
 })

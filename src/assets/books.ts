@@ -1,4 +1,4 @@
-import type { Book } from '@/types/book';
+import type { Book } from '@/types/InterfacesData';
 
 const books: Book[] = [
 {
@@ -50,3 +50,5 @@ date_publicated: '2024-02-15',
 sinopse: 'Primeiro livro já criado para entreter jogadores, esse texto é só um teste para saber se a sinopse está configurada e desenhada corretamente, repetindo texto:Primeiro livro já criado para entreter jogadores, esse texto é só um teste para saber se a sinopse está configurada e desenhada corretamente, repetindo texto:Primeiro livro já criado para entreter jogadores, esse texto é só um teste para saber se a sinopse está configurada e desenhada corretamente, repetindo texto:Primeiro livro já criado para entreter jogadores, esse texto é só um teste para saber se a sinopse está configurada e desenhada corretamente, repetindo texto:',
 }
 ];
+
+export default books;

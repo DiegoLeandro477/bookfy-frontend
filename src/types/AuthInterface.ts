@@ -9,3 +9,4 @@ export interface Register {
   password: string;
   role: string;
 }
+
