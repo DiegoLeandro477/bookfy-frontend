@@ -3,21 +3,25 @@ main
   .button_login.lateral(@click="changeController('login')", :class="{ 'inactive': controller === 'login' }")
     i.pi.pi-angle-left
 
-  form.container(@submit.prevent="login", v-if="controller==='login'")
-    .input Email:
-      input(type="text", v-model="email", placeholder="Email")
-    .input Senha:
-      input(type="password", v-model="password", placeholder="Senha")
-    input(type="submit", value="Log in")
+  div(v-if="controller==='login'")
+    h2 Login
+    form.container(@submit.prevent="login")
+      .input Email:
+        input(type="text", v-model="email", placeholder="Email")
+      .input Senha:
+        input(type="password", v-model="password", placeholder="Senha")
+      input.sub(type="submit", value="Log in")
 
-  form.container(@submit.prevent="register", v-if="controller==='register'")
-    .input Nome de Usuário
-      input(type="text", v-model="name", placeholder="Nome de Usuário")
-    .input Email:
-      input(type="text", v-model="email", placeholder="Email")
-    .input Senha:
-      input(type="password", v-model="password", placeholder="Senha")
-    input(type="submit", value="Sing in")
+  div(v-if="controller==='register'")
+    h2 Register
+    form.container(@submit.prevent="register")
+      .input Nome de Usuário
+        input(type="text", v-model="name", placeholder="Nome de Usuário")
+      .input Email:
+        input(type="text", v-model="email", placeholder="Email")
+      .input Senha:
+        input(type="password", v-model="password", placeholder="Senha")
+      input.sub(type="submit", value="Sing in")
 
   .button_register.lateral(@click="changeController('register')", :class="{ 'inactive': controller === 'register' }")
     i.pi.pi-angle-right
@@ -83,6 +87,9 @@ main
 </script>
   
 <style scoped>
+  div { 
+   text-align: center;
+  }
   main {
     display: flex;
     width: 100%;
@@ -148,6 +155,11 @@ main
     gap: 20px;
     align-items: center;
   }
+  input {
+    height: 25px;
+    border-radius: 4px;
+    border: none;
+  }
 
   .input {
     width: 80%;
@@ -156,4 +168,14 @@ main
     color: var(--color-text-light);
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   }
-</style>@/types/AuthInterface@/stores/Auth@/stores/AuthStore
+
+  .sub:hover{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: var(--color-contrast);
+    color: var(--color-text-night);
+    padding: 8px;
+  }
+</style>
