@@ -12,11 +12,13 @@ nav.header
 </template>
 <script setup lang="ts">
 import { useAuth } from '@/stores/AuthStore';
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { RouterLink, useRouter } from 'vue-router';
 
 const auth = useAuth();
 const router = useRouter();
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const logout = () => {
   auth.cleanToken();
   router.push('/Login');

@@ -33,6 +33,7 @@ main
   import axiosInstance from "@/services/http.js";
   import { AxiosError } from 'axios';
   import { useAuth } from '@/stores/AuthStore';
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
   import { RouterLink, useRouter } from 'vue-router';
 
   const auth = useAuth;
@@ -43,6 +44,7 @@ main
   const email = ref('');
   const password = ref('');
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
   const changeController = (mode: string) => {
     
     console.log('Antes: ', controller)
@@ -69,6 +71,7 @@ main
         }
     }
   };
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
   const register = async () => {
     try {
       const register: Register = {

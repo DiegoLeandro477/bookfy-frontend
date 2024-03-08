@@ -15,6 +15,7 @@
 import books from '@/assets/books';
 import type { Book } from '@/types/InterfacesData';
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const myBooks: Book[] = books;
 </script>
 
