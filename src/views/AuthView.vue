@@ -33,8 +33,10 @@ main
   import axiosInstance from "@/services/http.js";
   import { AxiosError } from 'axios';
   import { useAuth } from '@/stores/AuthStore';
+  import { RouterLink, useRouter } from 'vue-router';
 
   const auth = useAuth;
+  const router = useRouter();
   
   let controller = ref('login');
   const name = ref('');
@@ -57,6 +59,8 @@ main
       console.log(data);
       auth().setToken(data.token)
       auth().setUser(data.user);
+
+      router.push('/dashboard')
     } catch (error) {
         if (error instanceof AxiosError && error.response) {
             console.log(error.response.data);

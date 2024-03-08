@@ -4,19 +4,22 @@ nav.header
   #div-menu
     ul.menu
       router-link.menu-link(to="/") BIBLIOTECA
-      router-link.menu-link(to="/MyLibaries") MEUS LIVROS
+      router-link.menu-link(to="/dashboard") MEUS LIVROS
       router-link.menu-link(to="/ContactMe") CONTACTE-ME
   #user
-    label Diego Leandro
+    label(v-if="auth.token && auth.user", @click="logout") {{ auth.user.name }}
     i.pi.pi-user.icon-user(style="font-size: 1.5rem")
 </template>
-<script lang="ts">
-import { RouterLink } from 'vue-router';
+<script setup lang="ts">
+import { useAuth } from '@/stores/AuthStore';
+import { RouterLink, useRouter } from 'vue-router';
 
-export default {
-  components: {
-    RouterLink,
-  }
+const auth = useAuth();
+const router = useRouter();
+
+const logout = () => {
+  auth.cleanToken();
+  router.push('/Login');
 }
 </script>
 
@@ -100,5 +103,9 @@ export default {
     justify-content: right;
     align-items: center;
     width: 100%;
+  }
+
+  #user label:hover {
+    cursor: pointer;
   }
 </style>

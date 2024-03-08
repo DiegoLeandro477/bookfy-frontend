@@ -14,8 +14,8 @@ const router = createRouter({
       component: LibariesView
     },
     {
-      path: '/MyLibaries',
-      name: 'My Libaries',
+      path: '/dashboard',
+      name: 'Dashboard',
       component: MyLibaryView,
       meta: {
         auth: true
